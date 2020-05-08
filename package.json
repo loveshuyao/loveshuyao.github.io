@@ -1,0 +1,23 @@
+{
+  "name": "loveshuyao.github.io",
+  "version": "1.0.0",
+  "description": "Site: loveshuyao.github.io",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d dist"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loveshuyao/loveshuyao.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/loveshuyao/loveshuyao.github.io/issues"
+  },
+  "homepage": "https://loveshuyao.github.io",
+  "dependencies": {
+    "gh-pages": "^2.2.0"
+  }
+}
