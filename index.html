@@ -1,0 +1,112 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>Our Love Story</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital.ttf') format("truetype");
+		}
+	</style>
+	<link href="css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden.js"></script>
+	<script type="text/javascript" src="js/functions.js"></script>
+</head>
+
+<body>
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">##</span><br/>
+			<span class="comments"># 纾瑶，</span><br/>
+			<span class="comments"># 我想用极客特有的方式来表达对你的爱。</span><br/>
+			<span class="comments">##</span><br/>
+			i = Boy(<span class="string">"Xin Lu"</span>);<br/>
+			u = Girl(<span class="string">"Shuyao Gao"</span>);<br/>
+			<span class="comments"># 2020年1月13号的晚上，我们相遇在两颗红豆。第二天早上，你第一次听到了我的声音，那是我很随心且真诚的“问候”。之后我问你当时的感受，你说虽然感觉有点诧异但很喜欢我的声音。 </span><br/>
+			i.meet(u)<br/>
+			<span class="comments"># 回来包头了，我和你有一搭没一搭的分享着我回家后的所见所感：初中同学聚会、与表姐的酒吧畅谈。 </span><br/>
+			<span class="comments"># 从高伟的12年艰辛但美好的异地经历到你对亲密关系的看法，</span><br/>
+			<span class="comments"># 从高伟的12年艰辛但美好的异地经历到你对亲密关系的看法，</span><br/>
+			<span class="comments"># 从如何看待生养孩子到你也对疫情中受难的武汉同胞的悲悯，</span><br/>
+			<span class="comments"># 从你小时候的不愉快经历到对生命意义的思考，</span><br/>
+			<span class="comments"># 我一点点的靠近你的世界。</span><br/>
+			i.approach(u)<br/>
+			<span class="comments"># 还记得那个上午，我望着空调对手机另一边的你说：“我还真有点喜欢你”，那是我第一次小心翼翼的对你告白。</span><br/>
+			i.confess(u)<br/>
+			<span class="comments"># 第一次视频的那个夜晚很难忘，那是决定我们俩命运的夜晚，难眠，但是还好有你的那句“我跟你走”。</span><br/>
+			sleepless(u, i)<br/>
+			<span class="comments"># 好幸运遇到你，我从没感觉我的灵魂如此和另一个灵魂紧密又亲切的触碰到一起。</span><br/>
+			unique_soul(u, i)<br/>
+			<span class="comments"># 之后的漫漫等待，我们用自己的成熟接纳和包容对方的不成熟，我们尽力去给对方无条件的爱。</span><br/>
+			love(u, i, condition=<span class="keyword">None</span>)<br/>
+			<span class="comments"># 我们盼望着能早日相见，一起过属于我们的小日子。</span><br/>
+			<span class="comments"># 终于，在广州，我们盼望已久的日子到来了。</span><br/>
+			live_together(u, i) <br/>
+			<span class="comments"># 我发现我还有很多很多需要学习和进步的来更好的爱你，请给我一些时间让自己能看到自己更多的爱投射在你的生命里。</span><br/>
+			i.need_more_time() <br/>
+			<span class="comments"># 我相信，无论是甜蜜时光，还是磕磕绊绊，都不断让我坚信我们的爱会在更丰满的维度上不断深刻。</span><br/>
+			multi-dimension_love(u, i, degree=<span class="keyword">deeper_and_deeper</span>) <br/>
+			<span class="comments"># 那束光才刚刚把我们接走，我们的故事才刚刚开始。</span><br/>
+			unique_soul_love_light(u, i) <br/>
+				
+			while <span class="keyword">True</span>:<br/>
+			<span class="placeholder"></span> love(u, i, time=<span class="keyword">forever</span>):<br/>
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					Happy Birthday Shuyao, I have fallen in love with you for
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					Love u forever and ever.<br/>
+					<div class="signature">- Xin </div>
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- 	<div id="copyright">
+		Copyright © 2020 <a href='http://.com'>.com</a> 2020-2020
+	</div> -->
+</div>
+<script type="text/javascript">
+	var offsetX = $("#loveHeart").width() / 2;
+	var offsetY = $("#loveHeart").height() / 2 - 55;
+	var together = new Date();
+	// 此处月份介于 0 ~ 11 之间。用本地时间表示，如 8 月要用 7 表示。
+	together.setFullYear(2020, 0, 24);
+	together.setHours(11);
+	together.setMinutes(19);
+	together.setSeconds(0);
+	together.setMilliseconds(0);
+
+	if (!document.createElement('canvas').getContext) {
+		var msg = document.createElement("div");
+		msg.id = "errorMsg";
+		msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+		document.body.appendChild(msg);
+		$("#code").css("display", "none")
+		$("#copyright").css("position", "absolute");
+		$("#copyright").css("bottom", "10px");
+		document.execCommand("stop");
+	} else {
+		setTimeout(function () {
+			startHeartAnimation();
+		}, 5000);
+
+		timeElapse(together);
+		setInterval(function () {
+			timeElapse(together);
+		}, 500);
+
+		adjustCodePosition();
+		$("#code").typewriter();
+	}
+</script>
+</body>
+</html>
